@@ -1,0 +1,17 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block news %}
+<div>
+    {% for m in api.articles %}
+    <div class="container">
+     <img src="{{m.urlToImage}}" alt=" news">
+     <p> <article>{{ m.description }}</article> </p>
+     {% comment %} <p> <article>{{ m.content }}</article> </p> {% endcomment %}
+     
+     
+    
+    </div>
+    {% endfor %}
+
+</div>
+{% endblock news%}
